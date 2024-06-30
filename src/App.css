@@ -1,0 +1,47 @@
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+
+body{
+  width:100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 550px;
+  height: 50px;
+}
+
+span{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li{
+  list-style: none;
+}
+.menu li a{
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.menu li a:hover{
+  color: yellow;
+}
+
+.menu li .active{
+  color: yellow ;
+}
