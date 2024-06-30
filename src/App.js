@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [activeName, setActiveName] = useState("HOME")
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="navbar">
+        <span>LOGO</span>
+        <ul className="menu">
+          <li><a onClick={()=>setActiveName("HOME")} className={`HOME ${activeName==="HOME"? `active` : ""  } `} href="">HOME</a></li>
+          <li><a onClick={()=>setActiveName("ABOUT")} className={`ABOUT ${activeName==="ABOUT"? `active` : ""  } `} href="">ABOUT</a></li>
+          <li><a onClick={()=>setActiveName("SERVICES")} className={`SERVICES ${activeName==="SERVICES"? `active` : ""  } `} href="">SERVICES</a></li>
+          <li><a onClick={()=>setActiveName("CONTACT")} className={`CONTACT ${activeName==="CONTACT"? `active` : ""  } `} href="">CONTACT</a></li>
+        </ul>
+      </div>
+    </>
   );
 }
 
